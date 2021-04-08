@@ -20,6 +20,6 @@ require("./routes/estadoMaterial.routes.js")(app);
 require("./routes/personal.routes.js")(app);
 
 // set port, listen for requests
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log("Server is running on port 3000.");
 });
