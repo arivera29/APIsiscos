@@ -11,8 +11,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome SISCOS API REST" });
 });
+
+require("./routes/centros.routes.js")(app);
+require("./routes/departamentos.routes.js")(app);
+require("./routes/estadoMaterial.routes.js")(app);
+require("./routes/personal.routes.js")(app);
 
 // set port, listen for requests
 app.listen(3000, () => {
